@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proxy - SAFE TO USE, easy and fast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- header font -->
+  <link href="//fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css">
+  
+  <!-- body font -->
+  <link href="//fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+  <div class="container">
+  
+    <div class="main">
+  
+      <h1>Proxy</h1>
+      <p>
+        <br>
+        Hi! Welcome to this proxy. get started by entering a url below.
+        <br>
+        If you get a page that says:
+        <br>
+         Error: getaddrinfo ENOTFOUND err
+         <br>
+         That means that it is an invalid url
+         <br>
+         Get searching!
+      </p>
+
+      <div id="error"></div>
+
+      <form action="no-js" method="get" id="proxy-form">
+        <p>
+          URL: 
+          <input type="text" id="url" name="url" autofocus="autofocus" />
+          <input type="submit" value="Go" />
+        </p>
+
+
+      </form>
+    <br>
+    <p>
+      This uses some code from another proxy, <a href="https://replit.com/@ryantang12/proxy?v=1">Which can be found here</a>
+    <br>
+    <br>
+    This code has been edited and streemlined from the original.
+    <br>
+    <br>
+    Check out my other things at <a href="https://github.com/Coderz75">https://github.com/Coderz75</a>
+    </p>
+
+
+	<script>
+		function $(id){
+			return document.getElementById(id);
+		}
+		
+		$('proxy-form').onsubmit = function(){
+			var url = $('url').value;
+			if(url.substr(0,4) != "http"){
+				url = "https://" + url;
+			}
+			window.location.href='https://proxy.nuaymsyed.repl.co/unblocked/' + url;
+			return false;
+		};
+		
+    
+		window.onload = function() { 
+			$('url').focus(); 
+		}
+	</script>
+  
+  
+</body>
+</html>
